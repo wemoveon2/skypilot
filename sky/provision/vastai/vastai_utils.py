@@ -6,8 +6,6 @@ from pathlib import Path
 
 import requests
 
-from sky.clouds.service_catalog.data_fetchers import fetch_fluidstack
-
 
 def get_key_suffix():
     return str(uuid.uuid4()).replace('-', '')[:8]
