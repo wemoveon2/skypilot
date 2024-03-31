@@ -41,8 +41,8 @@ def parse_offer(offer) -> dict:
     }
 
 def create_catalog(output_dir: str) -> None:
-    # FIXME(alanyu) - Vast AI has 
-    response = requests.get(ENDPOINT, param={
+    # FIXME(alanyu) - Limited to only 64 offers for some reason
+    response = requests.get(ENDPOINT, params={
       "verified": {"eq": True},
       "rentable": {"eq": True},
       "order": [["dphtotal","asc"],["total_flops","asc"]],
